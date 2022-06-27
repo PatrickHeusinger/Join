@@ -12,9 +12,22 @@ async function includeHTML() {
     }
 }
 
-setURL('https://patrick-heusinger.developerakademie.net/smallest_backend_ever/')
+let users = [];
+
+setURL('https://patrick-heusinger.developerakademie.net/smallest_backend_ever/');
 
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
+
+    console.log('users')
+}
+
+async function addUser() {
+    users.push('John');
+    await backend.setItem('users', JSON.stringify(users));
+}
+
+function deleteUser(name) {
+    backend.deleteItem('users');
 }
