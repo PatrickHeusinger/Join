@@ -11,10 +11,12 @@ async function includeHTML() {
         }
     }
 }
+/*------------------------------------------------------------------------------------------------------ */
+// TESTESTESTESTE - jra
 
 let users = [];
 
-setURL('https://patrick-heusinger.developerakademie.net/smallest_backend_ever/');
+setURL('http://patrick-heusinger.developerakademie.net/smallest_backend_ever');
 
 async function init() {
     await downloadFromServer();
