@@ -16,7 +16,6 @@ async function includeHTML() {
 
 let users = [];
 
-// setURL('http://patrick-heusinger.developerakademie.net/smallest_backend_ever');
 setURL('http://patrick-heusinger.developerakademie.net/smallest_backend_ever');
 
 async function init() {
