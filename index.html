@@ -11,17 +11,6 @@
     <script src="./mini_backend.js"></script>
     <script src="script.js"></script>
     <title>Join</title>
-    <script>
-        // setURL('http://patrick-heusinger.developerakademie.net/smallest_backend_ever');
-        setURL('http://patrick-heusinger.developerakademie.net/smallest_backend_ever');
-
-        async function init() {
-            await downloadFromServer();
-            users = JSON.parse(backend.getItem('users')) || [];
-
-            console.log('users')
-        }
-    </script>
 </head>
 
 <body onload="includeHTML();init()">
