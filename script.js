@@ -11,3 +11,5 @@ async function includeHTML() {
         }
     }
 }
+
+setURL('https://patrick-heusinger.developerakademie.net/smallest_backend_ever/')
