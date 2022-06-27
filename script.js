@@ -13,3 +13,8 @@ async function includeHTML() {
 }
 
 setURL('https://patrick-heusinger.developerakademie.net/smallest_backend_ever/')
+
+async function init() {
+    await downloadFromServer();
+    users = JSON.parse(backend.getItem('users')) || [];
+}
