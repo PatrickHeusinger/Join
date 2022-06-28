@@ -33,3 +33,20 @@ async function addUser() {
 function deleteUser(name) {
     backend.deleteItem('users');
 }
+
+
+// CLASSLIST MANAGMENT
+// addClass('','');
+function addClass(id, className) {
+    document.getElementById(id).classList.add(className);
+}
+
+// removeClass('','');
+function removeClass(id, className) {
+    document.getElementById(id).classList.remove(className);
+}
+
+// emptyInner('');
+function emptyInner(id) {
+    document.getElementById(id).innerHTML = ``;
+}
