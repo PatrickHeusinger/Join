@@ -16,13 +16,13 @@ async function includeHTML() {
 
 let users = [];
 
-setURL('http://patrick-heusinger.developerakademie.net/smallest_backend_ever');
+setURL('https://patrick-heusinger.developerakademie.net/smallest_backend_ever');
 
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
 
-    console.log('users')
+    console.log('users');
 }
 
 async function addUser() {
