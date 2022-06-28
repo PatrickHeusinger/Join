@@ -15,7 +15,7 @@ async function addTask() {
     };
 
     allTasks.push(newTask);
-    //  await backend.setItem('allTasks', JSON.stringify(allTasks));
+    await backend.setItem('allTasks', JSON.stringify(allTasks));
     console.log(allTasks);
 
 }
