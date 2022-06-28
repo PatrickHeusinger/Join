@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="./mini_backend.js"></script>
     <script src="script.js"></script>
+    <script src="task.js"></script>
     <title>Join</title>
 </head>
 
@@ -42,7 +43,7 @@
                 <div class="boardRow2">
                     <div class="left">
                         <span>CATEGORY</span>
-                        <select class="left">
+                        <select name="category" id="category" class="left">
                             <option value="Development">Development</option>
                             <option value="Design">Design</option>
                             <option value="Marketing">Marketing</option>
@@ -50,7 +51,7 @@
                     </div>
                     <div class="right">
                         <span>URGENCY</span>
-                        <select class="left">
+                        <select name="urgency" id="urgency" class="left">
                             <option value="High">High</option>
                             <option value="Medium">Medium</option>
                             <option value="Low">Low</option>
@@ -71,7 +72,7 @@
                         <div class="employers"></div>
                         <div class="btnTask">
                             <button id="cancelTask">CANCEL</button>
-                            <button id="createTask">CREATE TASK</button>
+                            <button onclick="addTask()" id="createTask">CREATE TASK</button>
                         </div>
 
                     </div>
