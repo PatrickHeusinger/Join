@@ -12,20 +12,84 @@
 </head>
 
 <body onload="includeHTML();init()">
+    <div class="main">
 
-    <div id="navbar" class="navbar">
-        <div w3-include-html="templates/header.html"></div>
+        <div id="navbar" class="navbar">
+            <div w3-include-html="templates/header.html"></div>
+            <footer class="footerDiv">
+                <div w3-include-html="templates/footer.html"></div>
+            </footer>
+        </div>
+
+        <div id="mainContent" class="content">
+            <div class="board">
+
+                <div class="headline">
+                    <h2>ADD TASK</h2>
+                    <span>Learning Managment System Project</span>
+                </div>
+
+                <div class="boardRow1">
+                    <div class="left">
+                        <span>TITLE</span>
+                        <input id="taskTitle" type="text">
+                    </div>
+                    <div class="right">
+                        <span>DUE DATE</span>
+                        <input id="taskDate" type="date">
+                    </div>
+                </div>
+                <div class="boardRow2">
+                    <div class="left">
+                        <span>CATEGORY</span>
+                        <select class="left">
+                            <option value="Development">Development</option>
+                            <option value="Design">Design</option>
+                            <option value="Marketing">Marketing</option>
+                        </select>
+                    </div>
+                    <div class="right">
+                        <span>URGENCY</span>
+                        <select class="left">
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <div class="boardRow3">
+
+                    <div class="left">
+                        <span>DESCRIPTION</span>
+                        <input id="taskDescription" type="textfield">
+                    </div>
+
+                    <div class="right">
+                        <span>ASSIGNED TO</span>
+                        <div class="employers"></div>
+                        <div class="btnTask">
+                            <button id="cancelTask">CANCEL</button>
+                            <button id="createTask">CREATE TASK</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
     </div>
 
-    <div id="mainContent" class="content"></div>
 
 
 
 
-
-
-
-    <div w3-include-html="templates/footer.html"></div>
 </body>
 
 </html>
