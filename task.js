@@ -84,7 +84,7 @@ function renderTask() {
                         <span class="taskinnerwindowtitle">ASSIGNED TO</span>
                         <div class="employers"></div>
                         <div class="btnTask">
-                            <button class="taskmargin" id="cancelTask">CANCEL</button>
+                            <button onclick="cleanValues()" class="taskmargin" id="cancelTask">CANCEL</button>
                             <button onclick="addTask()" id="createTask">CREATE TASK</button>
                         </div>
 
