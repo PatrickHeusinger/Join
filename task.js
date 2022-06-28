@@ -34,7 +34,4 @@ function cleanValues() {
     urgency.value = '';
     description.value = '';
     newTask.value = '';
-
-
-
 }
