@@ -1,0 +1,98 @@
+.board {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.headlinetitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.headlinetitletext {
+    font-size: 0.9em;
+    color: rgb(131, 136, 174);
+}
+
+.mainposition {
+    display: flex;
+    width: 100%;
+}
+
+.taskinnerwindow {
+    background-color: rgb(244, 243, 251);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.taskinnerwindowtitle {
+    font-size: 1.0em;
+    font-weight: bold;
+    color: rgb(33, 45, 113);
+}
+
+.taskmargin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.boardRow1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boardRow2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boardRow3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dflexcolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    width: 260px;
+}
+
+.left {
+    width: 260px;
+}
+
+#cancelTask {
+    background: none;
+    border: none;
+    font-size: 0.95em;
+    font-weight: bold;
+    color: rgb(33, 45, 113);
+}
+
+#createTask {
+    border: none;
+    background-color: rgb(30, 49, 144);
+    color: white;
+    font-size: 0.95em;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.taskinputstyle {
+    height: 40px;
+    border: 1px solid rgb(230, 230, 231);
+    border-radius: 5px;
+    outline: none;
+}
+
+.left select {
+    padding-top: 10px;
+}
+
+.right select {
+    padding-top: 10px;
+}
