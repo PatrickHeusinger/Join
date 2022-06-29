@@ -14,23 +14,23 @@ async function includeHTML() {
 /*------------------------------------------------------------------------------------------------------ */
 
 
-let users = [];
+//let users = [];
 
 
 async function init() {
     await downloadFromServer();
-    users = JSON.parse(backend.getItem('users')) || [];
+    allTasks = JSON.parse(backend.getItem('allTasks')) || [];
 
-    console.log('users');
+    console.log('allTasks');
 }
 
 async function addUser() {
-    users.push('John');
-    await backend.setItem('users', JSON.stringify(users));
+    allTasks.push('John');
+    await backend.setItem('allTasks', JSON.stringify(allTasks));
 }
 
 function deleteUser(name) {
-    backend.deleteItem('users');
+    backend.deleteItem('allTasks');
 }
 
 

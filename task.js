@@ -4,7 +4,7 @@ let date;
 let category;
 let urgency;
 let description;
-let newTask
+let newTask;
 
 async function addTask() {
     title = document.getElementById('taskTitle');
