@@ -27,10 +27,9 @@ async function addTask() {
 }
 
 function cleanValues() {
-    title.value = '';
-    date.value = '';
-    description.value = '';
-    newTask.value = '';
+    document.getElementById('taskTitle').value = '';
+    document.getElementById('taskDate').value = '';
+    document.getElementById('taskDescription').value = '';
 }
 
 function renderTask() {
@@ -84,7 +83,7 @@ function renderTask() {
                         <span class="taskinnerwindowtitle">ASSIGNED TO</span>
                         <div class="employers"></div>
                         <div class="btnTask">
-                            <button onclick="cleanValues()" class="taskmargin" id="cancelTask">CANCEL</button>
+                            <button onclick="cleanValues()"class="taskmargin" id="cancelTask">CANCEL</button>
                             <button onclick="addTask()" id="createTask">CREATE TASK</button>
                         </div>
 
