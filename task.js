@@ -4,7 +4,9 @@ let date;
 let category;
 let urgency;
 let description;
-let newTask
+let newTask;
+let name;
+
 
 async function addTask() {
     title = document.getElementById('taskTitle');
@@ -22,7 +24,9 @@ async function addTask() {
 
     allTasks.push(newTask);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
+
     cleanValues();
+
     console.log(allTasks);
 }
 
@@ -31,14 +35,13 @@ function cleanValues() {
     date.value = '';
     description.value = '';
     newTask.value = '';
-<<<<<<< HEAD
-=======
+
 }
 
 function renderTask() {
     emptyInner('mainContent');
-    document.getElementById('mainContent').innerHTML = /*html*/`
-        <form>
+    document.getElementById('mainContent').innerHTML = /*html*/ `
+        <form onsubmit="return false">
         <div class="board">
             <div class="headline">
                 <div class="headlinetitle">Add Task</div>
@@ -49,12 +52,12 @@ function renderTask() {
                     <div class="left dflexcolumn">
 
                         <span class="taskinnerwindowtitle">TITLE</span>
-                        <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title..." required>
+                        <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title...">
 
                     </div>
                     <div class="right dflexcolumn">
                         <span class="taskinnerwindowtitle">DUE DATE</span>
-                        <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="date" required>
+                        <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="date">
                     </div>
                 </div>
                 <div class="boardRow2">
@@ -79,14 +82,14 @@ function renderTask() {
 
                     <div class="left">
                         <span class="taskinnerwindowtitle">DESCRIPTION</span>
-                        <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description..." required>
+                        <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description...">
                     </div>
 
                     <div class="right">
                         <span class="taskinnerwindowtitle">ASSIGNED TO</span>
                         <div class="employers"></div>
                         <div class="btnTask">
-                            <button class="taskmargin" id="cancelTask">CANCEL</button>
+                            <button onclick="cleanValues()" class="taskmargin" id="cancelTask">CANCEL</button>
                             <button onclick="addTask()" id="createTask">CREATE TASK</button>
                         </div>
 
@@ -96,5 +99,5 @@ function renderTask() {
         </div>
         </form>
     `;
->>>>>>> eab18c39e9a0cf373d779f373eb2e4875644cac9
+
 }
