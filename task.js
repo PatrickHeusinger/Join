@@ -31,8 +31,6 @@ function cleanValues() {
     date.value = '';
     description.value = '';
     newTask.value = '';
-<<<<<<< HEAD
-=======
 }
 
 function renderTask() {
@@ -96,5 +94,4 @@ function renderTask() {
         </div>
         </form>
     `;
->>>>>>> eab18c39e9a0cf373d779f373eb2e4875644cac9
 }
