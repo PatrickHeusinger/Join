@@ -47,12 +47,12 @@ function renderTask() {
                     <div class="left dflexcolumn">
 
                         <span class="taskinnerwindowtitle">TITLE</span>
-                        <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title..." required>
+                        <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title...">
 
                     </div>
                     <div class="right dflexcolumn">
                         <span class="taskinnerwindowtitle">DUE DATE</span>
-                        <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="date" required>
+                        <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="date" >
                     </div>
                 </div>
                 <div class="boardRow2">
@@ -77,7 +77,7 @@ function renderTask() {
 
                     <div class="left">
                         <span class="taskinnerwindowtitle">DESCRIPTION</span>
-                        <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description..." required>
+                        <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description..." >
                     </div>
 
                     <div class="right">
