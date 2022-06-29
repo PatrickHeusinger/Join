@@ -4,9 +4,7 @@ let date;
 let category;
 let urgency;
 let description;
-let newTask;
-let name;
-
+let newTask
 
 async function addTask() {
     title = document.getElementById('taskTitle');
@@ -24,9 +22,7 @@ async function addTask() {
 
     allTasks.push(newTask);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
-
     cleanValues();
-
     console.log(allTasks);
 }
 
@@ -35,7 +31,6 @@ function cleanValues() {
     date.value = '';
     description.value = '';
     newTask.value = '';
-
 }
 
 function renderTask() {
@@ -52,12 +47,12 @@ function renderTask() {
                     <div class="left dflexcolumn">
 
                         <span class="taskinnerwindowtitle">TITLE</span>
-                        <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title...">
+                        <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title..." required>
 
                     </div>
                     <div class="right dflexcolumn">
                         <span class="taskinnerwindowtitle">DUE DATE</span>
-                        <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="date">
+                        <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="date" required>
                     </div>
                 </div>
                 <div class="boardRow2">
@@ -82,14 +77,14 @@ function renderTask() {
 
                     <div class="left">
                         <span class="taskinnerwindowtitle">DESCRIPTION</span>
-                        <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description...">
+                        <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description..." required>
                     </div>
 
                     <div class="right">
                         <span class="taskinnerwindowtitle">ASSIGNED TO</span>
                         <div class="employers"></div>
                         <div class="btnTask">
-                            <button onclick="cleanValues()" class="taskmargin" id="cancelTask">CANCEL</button>
+                            <button class="taskmargin" id="cancelTask">CANCEL</button>
                             <button onclick="addTask()" id="createTask">CREATE TASK</button>
                         </div>
 
@@ -99,5 +94,4 @@ function renderTask() {
         </div>
         </form>
     `;
-
 }
