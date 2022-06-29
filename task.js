@@ -35,8 +35,8 @@ function cleanValues() {
 
 function renderTask() {
     emptyInner('mainContent');
-    document.getElementById('mainContent').innerHTML = /*html*/`
-        <form>
+    document.getElementById('mainContent').innerHTML = /*html*/ `
+        <form onsubmit="return false">
         <div class="board">
             <div class="headline">
                 <div class="headlinetitle">Add Task</div>
