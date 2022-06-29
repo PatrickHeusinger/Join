@@ -20,17 +20,23 @@ async function includeHTML() {
 async function init() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
-
     console.log('allTasks');
 }
+
+
 
 async function addUser() {
     allTasks.push('John');
     await backend.setItem('allTasks', JSON.stringify(allTasks));
+    // boardToDo.push('John');
+    // await backend.setItem('boardToDo', JSON.stringify(boardToDo));
+
+
 }
 
-function deleteUser(name) {
+function deleteUser() {
     backend.deleteItem('allTasks');
+    //backend.deleteItem('boardToDo');
 }
 
 
