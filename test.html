@@ -1,0 +1,19 @@
+Drop divs
+
+
+<div id="toDo" ondrop="moveTo('toDo')" ondragover="allowDrop(event)"></div>
+
+<div id="inPro" ondrop="moveTo('inPro')" ondragover="allowDrop(event)"></div>
+
+<div id="testing" ondrop="moveTo('testing')" ondragover="allowDrop(event)"></div>
+
+<div id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)"></div>
+
+
+Drag Div
+
+<div id="blTask${i}" draggable="true" ondragstart="drag(event)"></div>
+
+
+
+Functions function startDragging(i) { currenDraggedElement = i; } function allowDrop(ev) { ev.preventDefault(); } function moveTo(i) { let task = boardArray.find(t => t.UnixStamp === currenDraggedElement); boardToDo[i] = i; }
