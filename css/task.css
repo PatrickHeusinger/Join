@@ -1,23 +1,4 @@
-.board {
-    padding-left: 30px;
-    padding-right: 30px;
-}
 
-.headlinetitle {
-    font-size: 1.5em;
-    font-weight: bold;
-    padding-top: 40px;
-}
-
-.headlinetitletext {
-    font-size: 0.9em;
-    color: rgb(131, 136, 174);
-}
-
-.mainposition {
-    display: flex;
-    width: 100%;
-}
 
 .taskinnerwindow {
     background-color: rgb(244, 243, 251);

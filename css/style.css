@@ -1,7 +1,47 @@
 body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
+    background-color: rgb(240, 240, 240);
+    color: #363636;
 }
+
+/* ON ALL SITES */
+.mainposition {
+    display: flex;
+    width: 100%;
+}
+
+.content {
+    width: 80%;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.board {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.headlinetitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.headlinetitletext {
+    font-size: 0.9em;
+    color: rgb(131, 136, 174);
+}
+
+/* CHART */
+.d-none {
+    display: none;
+}
+
+/* HEADER */
 
 .navbar {
     width: 20%;
@@ -45,15 +85,3 @@ body {
     color: darkgray;
 }
 
-.content {
-    width: 80%;
-}
-
-.main {
-    display: flex;
-    height: 100vh;
-}
-
-.d-none {
-    display: none;
-}

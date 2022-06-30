@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- OFFENE BEREICHE -->
+<!-- # DONNERSTAG -->
+<!-- # Benutzer anlegen und alle werte pushen/splicen-->
+<!-- # Drag and drop-->
+<!-- # FREITAG -->
+<!-- # REST VON DONNERSTAG UND CSS IN 5 BEREICHEN -->
+<!-- # beim css machen die classen einheitlich benennen mit namen beginnen ausgeschrieben ausser backlog-->
+<!-- # WAS SOLL IN START UND HELP REIN? -->
+<!-- # anderes design auswählen? andere name (plan, exact, teamtable)? alles auf english?-->
+<!-- # welchen link muss ich wo rein machen für das backend? -->
+<!-- # categorien selber erstellen einbauen? -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="task.css">
-    <script src="./mini_backend.js"></script>
-    <script src="script.js"></script>
-    <script src="task.js"></script>
-    <script src="backlog.js"></script>
-    <script src="board.js"></script>
-    <script src="help.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/backlog.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/help.css">
+    <script src="./js/mini_backend.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/task.js"></script>
+    <script src="js/backlog.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/help.js"></script>
     <title>Join</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
 </head>
 
-<body onload="includeHTML();init();initBoard()">
+<body onload="includeHTML(), init(), initBoard()">
     <div class="main">
         <div class="mainposition">
             <div id="navbar" class="navbar">
@@ -25,16 +39,21 @@
                     <div w3-include-html="templates/footer.html"></div>
                 </footer>
             </div>
-
             <div id="mainContent" class="content">
+                <div class="board">
+                    <div class="headlinetitle">Join - Welcome!</div>
+                    <span class="headlinetitletext">Learning Managment System Project</span>
+                    <div>
+                        uhrzeit datum
+                        content
+                        spruch mit zeit?
+                        botton um direkt zu task geführt zu werden?
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
-
 </body>
 
 </html>

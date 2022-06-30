@@ -14,9 +14,6 @@ async function includeHTML() {
 /*------------------------------------------------------------------------------------------------------ */
 
 
-//let users = [];
-
-
 async function init() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
@@ -24,22 +21,15 @@ async function init() {
 }
 
 
-
 async function addUser() {
     allTasks.push('John');
     await backend.setItem('allTasks', JSON.stringify(allTasks));
-    // boardToDo.push('John');
-    // await backend.setItem('boardToDo', JSON.stringify(boardToDo));
-
-
 }
+
 
 function deleteUser() {
     backend.deleteItem('allTasks');
-    //backend.deleteItem('boardToDo');
 }
-
-
 // CLASSLIST MANAGMENT
 // addClass('','');
 function addClass(id, className) {

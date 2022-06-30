@@ -1,4 +1,5 @@
 let allTasks = [];
+let boardToDo = [];
 let title;
 let date;
 let category;
@@ -19,18 +20,19 @@ async function addTask() {
         'urgency': urgency.value,
         'description': description.value
     };
-
     allTasks.push(newTask);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
     cleanValues();
     console.log(allTasks);
 }
 
+
 function cleanValues() {
     document.getElementById('taskTitle').value = '';
     document.getElementById('taskDate').value = '';
     document.getElementById('taskDescription').value = '';
 }
+
 
 function renderTask() {
     emptyInner('mainContent');
@@ -44,10 +46,8 @@ function renderTask() {
             <div class="taskinnerwindow">
                 <div class="boardRow1">
                     <div class="left dflexcolumn">
-
                         <span class="taskinnerwindowtitle">TITLE</span>
                         <input class="taskmargin taskinputstyle" name="title" id="taskTitle" type="text" placeholder="Title...">
-
                     </div>
                     <div class="right dflexcolumn">
                         <span class="taskinnerwindowtitle">DUE DATE</span>
@@ -73,12 +73,10 @@ function renderTask() {
                     </div>
                 </div>
                 <div class="boardRow3">
-
                     <div class="left">
                         <span class="taskinnerwindowtitle">DESCRIPTION</span>
                         <input class="taskmargin taskinputstyle" id="taskDescription" type="textfield" placeholder="Description..." >
                     </div>
-
                     <div class="right">
                         <span class="taskinnerwindowtitle">ASSIGNED TO</span>
                         <div class="employers"></div>
@@ -86,7 +84,6 @@ function renderTask() {
                             <button onclick="cleanValues()"class="taskmargin" id="cancelTask">CANCEL</button>
                             <button onclick="addTask()" id="createTask">CREATE TASK</button>
                         </div>
-
                     </div>
                 </div>
             </div>

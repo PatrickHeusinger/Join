@@ -1,0 +1,29 @@
+.boardContentPosition {
+    display: flex;
+}
+
+.boardContentStyle {
+    width: 80%;
+    height: 80%;
+}
+
+.boardBg1 {
+    background-color: blue;
+    height: 85vh;
+    overflow: auto;
+}
+.boardBg2 {
+    background-color: green;
+    height: 85vh;
+    overflow: auto;
+} 
+.boardBg3 {
+    background-color: yellow;
+    height: 85vh;
+    overflow: auto;
+}  
+.boardBg4    {
+    background-color: red;
+    height: 85vh;
+    overflow: auto;
+} 

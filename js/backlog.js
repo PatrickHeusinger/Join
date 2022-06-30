@@ -1,39 +1,36 @@
-
 function renderBacklog() {
-
-    document.getElementById('mainContent').innerHTML = '';
+    emptyInner('mainContent');
     renderBacklogTasks();
 }
 
+
 function renderBacklogTasks() {
     document.getElementById('mainContent').innerHTML = /*html*/`
-    <div class="board">
-        <div class="headline">
-            <div class="headlinetitle">Backlog</div>
-            <span class="headlinetitletext">Learning Managment System Project</span>
-        </div>
-        <div class="blContent">
-        <div class="blBacklog">
-            <div class="blHeadlines">
-                <div>AssignedTo</div>
-                <div>Category</div>
-                <div>Details</div>
+        <div class="board">
+            <div class="headline">
+                <div class="headlinetitle">Backlog</div>
+                <span class="headlinetitletext">Learning Managment System Project</span>
             </div>
-            <div id="blBacklog" class="blBacklog">
-        
+            <div class="blContent">
+            <div class="blBacklog">
+                <div class="blHeadlines">
+                    <div>AssignedTo</div>
+                    <div>Category</div>
+                    <div>Details</div>
+                </div>
+                <div id="blBacklog" class="blBacklog"></div>
             </div>
         </div>
-    </div>
     `;
     renderBacklogContent();
 }
 
+
 function renderBacklogContent() {
-    document.getElementById('blBacklog').innerHTML = '';
+    emptyInner('blBacklog');
     for (let i = 0; i < allTasks.length; i++) {
-       let task = allTasks[i];
-            
-            document.getElementById('blBacklog').innerHTML += /*html*/`
+        let task = allTasks[i];
+        document.getElementById('blBacklog').innerHTML += /*html*/`
             <div id="blTask${i}">
                 <div>${task['title']}</div>
                 <div>${task['description']}</div>
@@ -45,15 +42,15 @@ function renderBacklogContent() {
     }
 }
 
+
 async function deleteTask(i) {
     allTasks.splice(i, 1);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
-    renderBacklogContent();    
+    renderBacklogContent();
 }
 
-let boardToDo = [];
 
-async function toBoard() {
+async function toBoard(i) {
     boardToDo.push(allTasks);
     await backend.setItem('boardToDo', JSON.stringify(boardToDo));
     deleteTask(i);
