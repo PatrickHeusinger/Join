@@ -38,7 +38,7 @@ function renderBoardTasks() {
 function renderBoardContent() {
     emptyInner('toDo');
     for (let i = 0; i < boardToDo.length; i++) {
-        let btask = boardToDo[i];
+        let btask = boardToDo[i][0];
         document.getElementById('toDo').innerHTML += /*html*/`
             <div id="toDOTask${i}">
                 <div>${btask['title']}</div>
