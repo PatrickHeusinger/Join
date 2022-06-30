@@ -51,7 +51,7 @@ async function deleteTask(i) {
 
 
 async function toBoard(i) {
-    boardToDo.push(allTasks);
+    boardToDo.push(allTasks[i]);
     await backend.setItem('boardToDo', JSON.stringify(boardToDo));
     deleteTask(i);
     console.log(boardToDo);

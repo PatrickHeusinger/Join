@@ -38,7 +38,7 @@ function renderBoardTasks() {
 function renderBoardContent() {
     emptyInner('toDo');
     for (let i = 0; i < boardToDo.length; i++) {
-        let btask = boardToDo[i][0];
+        let btask = boardToDo[i];
         document.getElementById('toDo').innerHTML += /*html*/`
             <div id="toDOTask${i}">
                 <div>${btask['title']}</div>
@@ -49,6 +49,7 @@ function renderBoardContent() {
         `;
     }
 }
+
 
 async function initBoard() {
     await downloadFromServer();
