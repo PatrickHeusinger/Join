@@ -61,7 +61,7 @@ function renderBoardTasks() {
 }
 
 
-function renderBoardContent(element) {
+function renderBoardContent(element, x) {
     return /*html*/`
             <div id="toDOTask${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="boardBox"> 
                 <div class="toDoposition">
@@ -72,7 +72,7 @@ function renderBoardContent(element) {
                     <div>Urgency: ${element['urgency']}</div>
                     <div class="tododescrip">${element['description']}</div>
                     </div>
-                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
+                    <div><button class="boardbtn" onclick="deleteBoardTask(${x})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
                 </div>
             </div>
         `;
@@ -86,7 +86,7 @@ async function initBoard() {
 
 
 async function deleteBoardTask(i) {
-    boardToDo.splice(id, 1);
+    boardToDo.splice(i, 1);
     await backend.setItem('boardToDo', JSON.stringify(boardToDo));
     renderBoardContent(i);
     save();
@@ -125,14 +125,14 @@ function updateHTML() {
     document.getElementById('toDo').innerHTML = '';
     for (let index = 0; index < toDo.length; index++) {
         const element = toDo[index];
-        document.getElementById('toDo').innerHTML += renderBoardContent(element);
+        document.getElementById('toDo').innerHTML += renderBoardContent(element, index);
     }
 
     let inPro = boardToDo.filter(t => t['board'] == 'inPro');
     document.getElementById('inPro').innerHTML = '';
     for (let index = 0; index < inPro.length; index++) {
         const element = inPro[index];
-        document.getElementById('inPro').innerHTML += renderBoardContent(element);
+        document.getElementById('inPro').innerHTML += renderBoardContent(element, index);
         console.log(element)
     }
 
@@ -140,14 +140,14 @@ function updateHTML() {
     document.getElementById('testing').innerHTML = '';
     for (let index = 0; index < testing.length; index++) {
         const element = testing[index];
-        document.getElementById('testing').innerHTML += renderBoardContent(element);
+        document.getElementById('testing').innerHTML += renderBoardContent(element, index);
     }
 
     let done = boardToDo.filter(t => t['board'] == 'done');
     document.getElementById('done').innerHTML = '';
     for (let index = 0; index < done.length; index++) {
         const element = done[index];
-        document.getElementById('done').innerHTML += renderBoardContent(element);
+        document.getElementById('done').innerHTML += renderBoardContent(element, index);
     }
 }
 

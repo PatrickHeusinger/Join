@@ -65,6 +65,7 @@ function cleanValues() {
     document.getElementById('category').value = '';
     document.getElementById('employer').value = '';
     checkUncheck(this);
+    employer = [];
 }
 
 
@@ -171,7 +172,7 @@ function renderTask() {
                             <div class="multiselect">
                                 <div class="selectBox" onclick="showCheckboxes()">
                                     <select id="employer" class="left dflexcolumn taskmargin taskinputstyle">
-                                    <option value="" disabled selected>- select employer -</option>
+                                    <option>- select employer -</option>
                                     </select>
                                     <div class="overSelect"></div>
                                     </div>
