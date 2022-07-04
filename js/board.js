@@ -66,11 +66,11 @@ function renderBoardContent(element, x) {
             <div id="toDOTask${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="boardBox"> 
                 <div class="toDoposition">
                     <div>
-                    <div>Title: ${element['title']}</div>
-                    <div>Date: ${element['created']}</div>
-                    <div>Due Date: ${element['date']}</div>
-                    <div>Urgency: ${element['urgency']}</div>
-                    <div class="tododescrip">${element['description']}</div>
+                        <div>Title: ${element['title']}</div>
+                        <div>Date: ${element['created']}</div>
+                        <div>Due Date: ${element['date']}</div>
+                        <div>Urgency: ${element['urgency']}</div>
+                        <div class="tododescrip">${element['description']}</div>
                     </div>
                     <div><button class="boardbtn" onclick="deleteBoardTask(${x})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
                 </div>
@@ -106,16 +106,12 @@ function allowDrop(ev) {
 
 
 function moveTo(board) {
-
     for (let i = 0; i < boardToDo.length; i++) {
         const content = boardToDo[i].id;
-
         if (content == currentDraggedElement)
             boardToDo[i]['board'] = board;
-
         updateHTML();
     }
-
 }
 
 
@@ -133,7 +129,6 @@ function updateHTML() {
     for (let index = 0; index < inPro.length; index++) {
         const element = inPro[index];
         document.getElementById('inPro').innerHTML += renderBoardContent(element, index);
-        console.log(element)
     }
 
     let testing = boardToDo.filter(t => t['board'] == 'testing');
