@@ -3,6 +3,7 @@
     text-align: center;
     color: rgb(33, 45, 113);
     font-weight: bold;
+    cursor: default;
 }
 
 .hcontactposition {
@@ -95,6 +96,7 @@
 
 .tutorialstyle {
     text-align: center;
+    cursor: default;
 }
 
 .tutorialstylelink {

@@ -17,7 +17,7 @@ async function addTask() {
     urgency = document.getElementById('urgency');
     description = document.getElementById('taskDescription');
     newTask = {
-        'id': getRandomID(allTasks),
+        'id': new Date().getTime(),
         'title': title.value,
         'date': date.value,
         'category': category.value,
@@ -30,13 +30,6 @@ async function addTask() {
     await backend.setItem('allTasks', JSON.stringify(allTasks));
     cleanValues();
     console.log(allTasks);
-}
-
-
-function getRandomID(allTasks) {
-    let newID = Math.floor(Math.random() * new Date().getTime());
-    console.log(newID);
-    return allTasks.some(elem => elem.uid == newID) ? getRandomID(allTasks) : newID;
 }
 
 

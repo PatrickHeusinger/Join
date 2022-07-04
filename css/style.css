@@ -42,11 +42,13 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     padding-top: 40px;
+    cursor: default;
 }
 
 .headlinetitletext {
     font-size: 0.9em;
     color: rgb(131, 136, 174);
+    cursor: default;
 }
 
 ::placeholder {
@@ -254,12 +256,13 @@ body {
     font-weight: bold;
     text-align: center;
     letter-spacing: 3px;
+    cursor: default;
 }
 
 .wtext {
     font-size: 0.8em;
     text-align: center;
-
+    cursor: default;
 }
 
 .wbtntext {

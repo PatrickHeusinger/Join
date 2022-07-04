@@ -11,48 +11,52 @@
 
 .boardBg1 {
     background-color: rgba(0, 255, 255, 0.200);
-    height: 77vh;
+    height: 76vh;
     overflow: auto;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
 
 .boardBg2 {
     background-color: rgba(0, 210, 0, 0.200);
-    height: 77vh;
+    height: 76vh;
     overflow: auto;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
 
 .boardBg3 {
     background-color: rgba(255, 255, 0, 0.200);
-    height: 77vh;
+    height: 76vh;
     overflow: auto;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
 
 .boardBg4 {
     background-color: rgba(255, 0, 0, 0.200);
-    height: 77vh;
+    height: 76vh;
     overflow: auto;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
+
 .boardBg1:hover {
     filter: brightness(100%);
 }
+
 .boardBg2:hover {
     filter: brightness(100%);
 }
+
 .boardBg3:hover {
     filter: brightness(100%);
 }
+
 .boardBg4:hover {
     filter: brightness(100%);
 }
