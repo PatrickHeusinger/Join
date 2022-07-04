@@ -75,7 +75,7 @@ function renderBoardContent(element) {
                     <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
                 </div>
             </div>
-        `;
+        `;  
 }
 
 

@@ -12,6 +12,7 @@ let id;
 let today = new Date();
 let all;
 let expanded = false;
+
 // .replace('T', ', ').replace('Z', '').slice(0, -4);
 function showCheckboxes() {
     var checkboxes = document.getElementById("checkboxes");
