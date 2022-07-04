@@ -5,10 +5,25 @@ let date;
 let category;
 let urgency;
 let description;
+let employer = [];
 let newTask;
 let board;
 let id = 0;
 let today = new Date();
+let all;
+let expanded = false;
+
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
+}
+
 
 async function addTask() {
     title = document.getElementById('taskTitle');
@@ -17,19 +32,28 @@ async function addTask() {
     urgency = document.getElementById('urgency');
     description = document.getElementById('taskDescription');
     newTask = {
-        'id': new Date().getTime(),
+        'id': getRandomID(allTasks),
         'title': title.value,
         'date': date.value,
         'category': category.value,
         'urgency': urgency.value,
         'description': description.value,
+        'board': 'toDo',
         'created': today,
-        'board': 'toDo'
+        'employer': employer
     };
     allTasks.push(newTask);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
+    checkbox();
     cleanValues();
     console.log(allTasks);
+}
+
+
+function getRandomID(allTasks) {
+    let newID = Math.floor(Math.random() * new Date().getTime());
+    console.log(newID);
+    return allTasks.some(elem => elem.uid == newID) ? getRandomID(allTasks) : newID;
 }
 
 
@@ -39,6 +63,36 @@ function cleanValues() {
     document.getElementById('taskDescription').value = '';
     document.getElementById('urgency').value = '';
     document.getElementById('category').value = '';
+    document.getElementById('employer').value = '';
+    checkUncheck(this);
+}
+
+
+function checkbox() {
+    let checked = false;
+    if (document.querySelector('#one:checked')) {
+        checked = true;
+        employer.push('Yener');
+    }
+    if (document.querySelector('#two:checked')) {
+        checked = true;
+        employer.push('Jan');
+    }
+    if (document.querySelector('#three:checked')) {
+        checked = true;
+        employer.push('Patrick');
+    }
+    if (document.querySelector('#four:checked')) {
+        checked = true;
+        employer.push('Guest');
+    }
+}
+
+function checkUncheck(main) {
+    all = document.getElementsByName('uncheck');
+    for (let a = 0; a < all.length; a++) {
+        all[a].checked = main.checked;
+    }
 }
 
 
@@ -83,7 +137,7 @@ function renderTask() {
                         </div>
                         <div class="right dflexcolumn">
                             <span class="taskinnerwindowtitle">DUE DATE</span>
-                            <input class="taskmargin taskinputstyle" name="date" id="taskDate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="- select date -">
+                            <input style="cursor: pointer;" class="taskmargin taskinputstyle" name="date" id="taskDate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="- select date -">
                         </div>
                     </div>
                     <div class="boardRow2">
@@ -114,6 +168,24 @@ function renderTask() {
                         </div>
                         <div class="right">
                             <span class="taskinnerwindowtitle">ASSIGNED TO</span>
+                            <div class="multiselect">
+                                <div class="selectBox" onclick="showCheckboxes()">
+                                    <select id="employer" class="left dflexcolumn taskmargin taskinputstyle">
+                                    <option value="" disabled selected>- select employer -</option>
+                                    </select>
+                                    <div class="overSelect"></div>
+                                    </div>
+                                    <div id="checkboxes">
+                                    <label for="one">
+                                    <input type="checkbox" id="one" name="uncheck"/>Yener</label>
+                                    <label for="two">
+                                    <input type="checkbox" id="two" name="uncheck"/>Jan</label>
+                                    <label for="three">
+                                    <input type="checkbox" id="three" name="uncheck"/>Patrick</label>
+                                    <label for="four">
+                                    <input type="checkbox" id="four" name="uncheck"/>Guest</label>
+                                </div>
+                            </div>
                             <div class="employers"></div>
                             <div class="btnTask">
                                 <button onclick="cleanValues()"class="taskmargin" id="cancelTask">CANCEL</button>
@@ -125,4 +197,5 @@ function renderTask() {
             </form>
         </div>
     `;
+    hideDate();
 }

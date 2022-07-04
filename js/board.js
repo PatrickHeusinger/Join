@@ -67,14 +67,12 @@ function renderBoardContent(element) {
                 <div class="toDoposition">
                     <div>
                     <div>Title: ${element['title']}</div>
-                    <div>Category: ${element['category']}</div>
-                    <div>Date: ${element['date']}</div>
+                    <div>Date: ${element['created']}</div>
+                    <div>Due Date: ${element['date']}</div>
                     <div>Urgency: ${element['urgency']}</div>
-                    <div>Description: ${element['description']}</div>
+                    <div class="tododescrip">${element['description']}</div>
                     </div>
-                    <div>
-                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img class="boardbtnimg" src="img/trash.png"></button></div>
-                    </div>
+                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
                 </div>
             </div>
         `;
@@ -95,6 +93,7 @@ async function deleteBoardTask(i) {
     renderBoard();
 }
 
+
 let currentDraggedElement;
 function startDragging(id) {
     currentDraggedElement = id;
@@ -110,9 +109,9 @@ function moveTo(board) {
 
     for (let i = 0; i < boardToDo.length; i++) {
         const content = boardToDo[i].id;
-       
+
         if (content == currentDraggedElement)
-        boardToDo[i]['board'] = board;
+            boardToDo[i]['board'] = board;
 
         updateHTML();
     }
