@@ -8,7 +8,7 @@ let description;
 let employer = [];
 let newTask;
 let board;
-let id = 0;
+let id;
 let today = new Date();
 let all;
 let expanded = false;

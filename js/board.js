@@ -61,8 +61,8 @@ function renderBoardTasks() {
 }
 
 
-function renderBoardContent(element, x) {
-    return /*html*/`
+function renderBoardContent(element) {
+    return /*html*/ `
             <div id="toDOTask${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="boardBox"> 
                 <div class="toDoposition">
                     <div>
@@ -72,7 +72,7 @@ function renderBoardContent(element, x) {
                         <div>Urgency: ${element['urgency']}</div>
                         <div class="tododescrip">${element['description']}</div>
                     </div>
-                    <div><button class="boardbtn" onclick="deleteBoardTask(${x})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
+                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
                 </div>
             </div>
         `;
@@ -84,17 +84,32 @@ async function initBoard() {
     boardToDo = JSON.parse(backend.getItem('boardToDo')) || [];
 }
 
-
+/*
 async function deleteBoardTask(i) {
-    boardToDo.splice(i, 1);
+    let index = boardToDo.findIndex(obj => obj.id == i);
+    boardToDo.splice(index, 1);
     await backend.setItem('boardToDo', JSON.stringify(boardToDo));
     renderBoardContent(i);
+    save();
+    renderBoard();
+}
+*/
+
+
+function deleteBoardTask(id) {
+    initBoard();
+    for (let i = 0; i < boardToDo.length; i++) {
+        if (boardToDo[i]['id'] == id) {
+            boardToDo.splice(i, 1);
+        }
+    }
     save();
     renderBoard();
 }
 
 
 let currentDraggedElement;
+
 function startDragging(id) {
     currentDraggedElement = id;
 }
@@ -121,28 +136,28 @@ function updateHTML() {
     document.getElementById('toDo').innerHTML = '';
     for (let index = 0; index < toDo.length; index++) {
         const element = toDo[index];
-        document.getElementById('toDo').innerHTML += renderBoardContent(element, index);
+        document.getElementById('toDo').innerHTML += renderBoardContent(element);
     }
 
     let inPro = boardToDo.filter(t => t['board'] == 'inPro');
     document.getElementById('inPro').innerHTML = '';
     for (let index = 0; index < inPro.length; index++) {
         const element = inPro[index];
-        document.getElementById('inPro').innerHTML += renderBoardContent(element, index);
+        document.getElementById('inPro').innerHTML += renderBoardContent(element);
     }
 
     let testing = boardToDo.filter(t => t['board'] == 'testing');
     document.getElementById('testing').innerHTML = '';
     for (let index = 0; index < testing.length; index++) {
         const element = testing[index];
-        document.getElementById('testing').innerHTML += renderBoardContent(element, index);
+        document.getElementById('testing').innerHTML += renderBoardContent(element);
     }
 
     let done = boardToDo.filter(t => t['board'] == 'done');
     document.getElementById('done').innerHTML = '';
     for (let index = 0; index < done.length; index++) {
         const element = done[index];
-        document.getElementById('done').innerHTML += renderBoardContent(element, index);
+        document.getElementById('done').innerHTML += renderBoardContent(element);
     }
 }
 
