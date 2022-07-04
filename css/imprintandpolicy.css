@@ -1,0 +1,6 @@
+.policyContent {
+    font-size: 0.85em;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 80vh;
+}

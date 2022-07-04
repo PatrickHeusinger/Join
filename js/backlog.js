@@ -8,17 +8,44 @@ function renderBacklogTasks() {
     document.getElementById('mainContent').innerHTML = /*html*/`
         <div class="board">
             <div class="headline">
-                <div class="headlinetitle">Backlog</div>
+                <div class="headlinetitle">BACKLOG</div>
                 <span class="headlinetitletext">Learning Managment System Project</span>
             </div>
-            <div class="blContent">
-            <div class="blBacklog">
-                <div class="blHeadlines">
-                    <div>AssignedTo</div>
-                    <div>Category</div>
-                    <div>Details</div>
+            <div id="responsivMain" class="d-none">
+                <div class="responsivPosition">
+                    <div onclick="responsiveClose()" class="responsiveClose"><img class ="responsivCloseImg" src="./img/close.png"></div>
+                    <nav>
+                        <div class="sidebarMenu">
+                            <ul class="innerMenu">
+                                <li><a href="index.html"><img class="navbarimg" src="./img/logo.png"></a></li>
+                                <li class="sideBar" onclick="renderBoard()">BOARD</li>
+                                <li class="sideBar" onclick="renderBacklog()">BACKLOG</li>
+                                <li class="sideBar" onclick="renderTask()">ADD TASK</li>
+                                <li class="sideBar" onclick="renderHelp()">HELP</li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <footer class="footerDiv">
+                    <div class="footer">
+                        <div class="footerimprint" onclick="renderImprint()">Imprint</div>
+                        <div class="footerpolicy" onclick="renderPolicy()">Policy</div>
+                    </div>
+                    </footer>
                 </div>
-                <div id="blBacklog" class="blBacklog"></div>
+            </div>
+            <div class="responsivMenu d-none" onclick="responsiveRender()"><img class="responsivImg" src="./img/menu.png">
+            </div>
+            <div class="taskinnerwindow">
+                <div class="blContent">
+                <div class="blBacklog">
+                    <div class="blHeadlines">
+                        <div>ASSIGNED TO</div>
+                        <div>TITLE</div>
+                        <div>CATEGORY</div>
+                        <div>DATE</div>
+                    </div>
+                    <div id="blBacklog" class="blBacklog"></div>
+                </div>
             </div>
         </div>
     `;
@@ -32,11 +59,22 @@ function renderBacklogContent() {
         let task = allTasks[i];
         document.getElementById('blBacklog').innerHTML += /*html*/`
             <div id="blTask${i}">
-                <div>${task['title']}</div>
-                <div>${task['description']}</div>
-                <div>${task['category']}</div>
-                <div><button onclick="deleteTask(${i})">Delete</button></div>
-                <div><button onclick="toBoard(${i})">Board</button></div>
+                <div class="backlogCard">
+                    <div class="blCard1">
+                        <div>${task['description']}</div>
+                        <div>${task['title']}</div>
+                        <div><b>${task['category']}</b></div>
+                        <div>${task['date']}</div>
+                    </div>
+                    <div class="blCard2">
+                        <div><button class="deletebtn" onclick="deleteTask(${i})">
+                        <img class="deletebtnimg" src="img/trash.png">
+                        </button></div>
+                        <div><button class="boardbtn" onclick="toBoard(${i})">
+                        <img class="boardbtnimg" src="img/board.png">
+                        </button></div>
+                    </div>
+                </div>
             </div>
         `;
     }
@@ -51,16 +89,9 @@ async function deleteTask(i) {
 
 
 async function toBoard(i) {
+    allTasks[i].id = getRandomID(allTasks);
     boardToDo.push(allTasks[i]);
     await backend.setItem('boardToDo', JSON.stringify(boardToDo));
     deleteTask(i);
     console.log(boardToDo);
 }
-
-
-// async function save() {
-//     await backend.setItem('boardToDo',JSON.stringify(boardToDo));
-
-//     toBoard();
-//}
-

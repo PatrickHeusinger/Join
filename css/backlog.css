@@ -1,19 +1,90 @@
 .blContent {
-
+    height: 78vh;
 }
 
 .blBacklog {
-
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 78vh;
 }
 
-.blAssignedTo {
-
+.blHeadlines {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.blCategory {
-
+.backlogCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b3b3b3;
+    background: rgba(255, 238, 83, 0.308);
+    height: 100px;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    filter: brightness(90%);
+    cursor: pointer;
 }
 
-.blDetails {
-
+.backlogCard:hover {
+    filter: brightness(100%);
 }
+
+.blCard1 {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    padding-top: 25px;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.deletebtn {
+    border: none;
+    background: none;
+}
+
+.deletebtnimg {
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 3px;
+}
+
+.deletebtnimg:hover {
+    opacity: 0.8;
+}
+
+.boardbtn {
+    border: none;
+    background: none;
+}
+
+.boardbtnimg {
+    width: 23px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.boardbtnimg:hover {
+    opacity: 0.8;
+}
+
+.blCard2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.blAssignedTo {}
+
+.blCategory {}
+
+.blDetails {}

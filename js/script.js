@@ -11,7 +11,6 @@ async function includeHTML() {
         }
     }
 }
-/*------------------------------------------------------------------------------------------------------ */
 
 
 async function init() {
@@ -44,4 +43,14 @@ function removeClass(id, className) {
 // emptyInner('');
 function emptyInner(id) {
     document.getElementById(id).innerHTML = ``;
+}
+
+
+function responsiveRender() {
+    removeClass('responsivMain','d-none')
+}
+
+
+function responsiveClose() {
+    addClass('responsivMain','d-none');
 }
