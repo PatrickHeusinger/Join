@@ -67,6 +67,7 @@ function renderBoardContent(element) {
                 <div class="toDoposition">
                     <div>
                         <div>Title: ${element['title']}</div>
+                       <div> <img src="${element['employerImg']}"></div>
                         <div>Date: ${element['created']}</div>
                         <div>Due Date: ${element['date']}</div>
                         <div>Urgency: ${element['urgency']}</div>

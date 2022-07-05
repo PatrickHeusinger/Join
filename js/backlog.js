@@ -5,7 +5,7 @@ function renderBacklog() {
 
 
 function renderBacklogTasks() {
-    document.getElementById('mainContent').innerHTML = /*html*/`
+    document.getElementById('mainContent').innerHTML = /*html*/ `
         <div class="board">
             <div class="headline">
                 <div class="headlinetitle">BACKLOG</div>
@@ -57,10 +57,11 @@ function renderBacklogContent() {
     emptyInner('blBacklog');
     for (let i = 0; i < allTasks.length; i++) {
         let task = allTasks[i];
-        document.getElementById('blBacklog').innerHTML += /*html*/`
+        document.getElementById('blBacklog').innerHTML += /*html*/ `
             <div id="blTask${i}">
                 <div class="backlogCard">
                     <div class="blCard1">
+                    <div><img src="${task['employerImg']}"></div>
                         <div>${task['employer']}</div>
                         <div>${task['title']}</div>
                         <div><b>${task['category']}</b></div>

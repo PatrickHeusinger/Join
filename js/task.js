@@ -6,6 +6,7 @@ let category;
 let urgency;
 let description;
 let employer = [];
+let img = [];
 let newTask;
 let board;
 let id;
@@ -40,7 +41,8 @@ async function addTask() {
         'description': description.value,
         'board': 'toDo',
         'created': today,
-        'employer': employer
+        'employer': employer,
+        'employerImg': img
     };
     allTasks.push(newTask);
     await backend.setItem('allTasks', JSON.stringify(allTasks));
@@ -66,6 +68,7 @@ function cleanValues() {
     document.getElementById('employer').value = '';
     checkUncheck(this);
     employer = [];
+    img = [];
 }
 
 
@@ -74,18 +77,22 @@ function checkbox() {
     if (document.querySelector('#one:checked')) {
         checked = true;
         employer.push('Yener');
+        img.push('img/office3.jpg');
     }
     if (document.querySelector('#two:checked')) {
         checked = true;
         employer.push('Jan');
+        img.push('img/office4.jpg');
     }
     if (document.querySelector('#three:checked')) {
         checked = true;
         employer.push('Patrick');
+        img.push('img/office2.jpg');
     }
     if (document.querySelector('#four:checked')) {
         checked = true;
         employer.push('Guest');
+        img.push('img/office1.jpg');
     }
 }
 
