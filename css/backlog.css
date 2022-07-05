@@ -11,10 +11,12 @@
 
 .blHeadlines {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 1.2em;
     font-weight: bold;
     cursor: default;
+    padding-right: 202px;
+    padding-left: 38px;
 }
 
 .backlogCard {

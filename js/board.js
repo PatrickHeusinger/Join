@@ -71,6 +71,8 @@ function renderBoardContent(element) {
                         <div>Date: ${element['created']}</div>
                         <div>Due Date: ${element['date']}</div>
                         <div>Urgency: ${element['urgency']}</div>
+                        <div>Due Date: ${element['date']}</div>
+                        <div>Employer: ${element['employer']}</div>
                         <div class="tododescrip">${element['description']}</div>
                     </div>
                     <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
