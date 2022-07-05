@@ -66,16 +66,19 @@ function renderBoardContent(element) {
             <div id="toDOTask${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="boardBox"> 
                 <div class="toDoposition">
                     <div>
-                        <div>Title: ${element['title']}</div>
-                       <div> <img src="${element['employerImg']}"></div>
-                        <div>Date: ${element['created']}</div>
-                        <div>Due Date: ${element['date']}</div>
+                        <div>${element['title']}</div>
+                        <div>${element['category']}</div>
+                        <div>${element['created']}</div>
+                        <div>Due: ${element['date']}</div>  
                         <div>Urgency: ${element['urgency']}</div>
-                        <div>Due Date: ${element['date']}</div>
-                        <div>Employer: ${element['employer']}</div>
                         <div class="tododescrip">${element['description']}</div>
                     </div>
-                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 100px;" class="boardbtnimg" src="img/trash.png"></button></div>
+                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 126px;" class="boardbtnimg" src="img/trash.png"></button>
+                    <div>
+                        <!-- <img class="empImgboard" src="${element['employerImg']}"> -->
+                        <div class="empImgboard">${element['employer']}</div>
+                    </div>
+                </div>
                 </div>
             </div>
         `;

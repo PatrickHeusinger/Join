@@ -10,7 +10,7 @@ let img = [];
 let newTask;
 let board;
 let id;
-let today = new Date();
+let today = new Date().toLocaleString('de');
 let all;
 let expanded = false;
 
@@ -84,23 +84,23 @@ function checkbox() {
     let checked = false;
     if (document.querySelector('#one:checked')) {
         checked = true;
-        employer.push('Yener');
-        img.push('img/office3.jpg');
+        employer.push('<br>Y.B.');
+        img.push('./img/office3.jpg');
     }
     if (document.querySelector('#two:checked')) {
         checked = true;
-        employer.push('Jan');
-        img.push('img/office4.jpg');
+        employer.push('<br>J.R.');
+        img.push('./img/office4.jpg');
     }
     if (document.querySelector('#three:checked')) {
         checked = true;
-        employer.push('Patrick');
-        img.push('img/office2.jpg');
+        employer.push('<br>P.H.');
+        img.push('./img/office2.jpg');
     }
     if (document.querySelector('#four:checked')) {
         checked = true;
-        employer.push('Guest');
-        img.push('img/office1.jpg');
+        employer.push('<br>Guest');
+        img.push('./img/office1.jpg');
     }
 }
 

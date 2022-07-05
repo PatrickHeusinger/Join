@@ -12,37 +12,41 @@
 .boardBg3 {
     background-color: rgba(0, 255, 255, 0.100);
     height: 76vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(90%);
+    filter: brightness(95%);
 }
 
 .boardBg4 {
     background-color: rgba(0, 210, 0, 0.100);
     height: 76vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(90%);
+    filter: brightness(95%);
 }
 
 .boardBg2 {
     background-color: rgba(255, 255, 0, 0.100);
     height: 76vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(90%);
+    filter: brightness(95%);
 }
 
 .boardBg1 {
     background-color: rgba(255, 0, 0, 0.100);
     height: 76vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(90%);
+    filter: brightness(95%);
 }
 
 .boardBg1:hover {
@@ -79,12 +83,12 @@
 
 .toDoposition {
     background-color: white;
-    border: 1px solid #b3b3b3;
+    border: 1px dotted #b3b3b3;
     padding: 5px;
     border-radius: 10px;
     margin: 5px;
     font-size: 0.8em;
-    height: 120px;
+    height: 141px;
     display: flex;
     justify-content: space-between;
     filter: brightness(96%);
@@ -99,5 +103,5 @@
     overflow-y: auto;
     overflow-x: hidden;
     height: 60px;
-    width: 107%;
+    width: 105%;
 }
