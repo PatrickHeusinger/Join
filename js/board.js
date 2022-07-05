@@ -66,14 +66,14 @@ function renderBoardContent(element) {
             <div id="toDOTask${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="boardBox"> 
                 <div class="toDoposition">
                     <div>
-                        <div>${element['title']}</div>
+                        <div class="blCardtitle">${element['title']}</div>
                         <div>${element['category']}</div>
                         <div>${element['created']}</div>
                         <div>Due: ${element['date']}</div>  
-                        <div>Urgency: ${element['urgency']}</div>
+                        <div class="blCardtitle">Urgency: ${element['urgency']}</div>
                         <div class="tododescrip">${element['description']}</div>
                     </div>
-                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 126px;" class="boardbtnimg" src="img/trash.png"></button>
+                    <div><button class="boardbtn" onclick="deleteBoardTask(${element['id']})"><img style="bottom: 126px; right: 0px;" class="boardbtnimg" src="img/trash.png"></button>
                     <div>
                         <!-- <img class="empImgboard" src="${element['employerImg']}"> -->
                         <div class="empImgboard">${element['employer']}</div>
@@ -90,17 +90,6 @@ async function initBoard() {
     boardToDo = JSON.parse(backend.getItem('boardToDo')) || [];
 }
 
-/*
-async function deleteBoardTask(i) {
-    let index = boardToDo.findIndex(obj => obj.id == i);
-    boardToDo.splice(index, 1);
-    await backend.setItem('boardToDo', JSON.stringify(boardToDo));
-    renderBoardContent(i);
-    save();
-    renderBoard();
-}
-*/
-
 
 function deleteBoardTask(id) {
     initBoard();
@@ -115,7 +104,6 @@ function deleteBoardTask(id) {
 
 
 let currentDraggedElement;
-
 function startDragging(id) {
     currentDraggedElement = id;
 }
@@ -137,28 +125,24 @@ function moveTo(board) {
 
 
 function updateHTML() {
-
     let toDo = boardToDo.filter(t => t['board'] == 'toDo');
     document.getElementById('toDo').innerHTML = '';
     for (let index = 0; index < toDo.length; index++) {
         const element = toDo[index];
         document.getElementById('toDo').innerHTML += renderBoardContent(element);
     }
-
     let inPro = boardToDo.filter(t => t['board'] == 'inPro');
     document.getElementById('inPro').innerHTML = '';
     for (let index = 0; index < inPro.length; index++) {
         const element = inPro[index];
         document.getElementById('inPro').innerHTML += renderBoardContent(element);
     }
-
     let testing = boardToDo.filter(t => t['board'] == 'testing');
     document.getElementById('testing').innerHTML = '';
     for (let index = 0; index < testing.length; index++) {
         const element = testing[index];
         document.getElementById('testing').innerHTML += renderBoardContent(element);
     }
-
     let done = boardToDo.filter(t => t['board'] == 'done');
     document.getElementById('done').innerHTML = '';
     for (let index = 0; index < done.length; index++) {

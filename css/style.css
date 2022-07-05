@@ -97,11 +97,11 @@ body {
 
 .boardBg4::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: rgba(43, 255, 0, 0.3);
+    background: rgba(34, 206, 0, 0.3);
 }
 
 .boardBg4::-webkit-scrollbar-thumb:active {
-    background: rgba(15, 177, 0, 0.3);
+    background: rgba(12, 148, 0, 0.3);
 }
 
 .boardBg2::-webkit-scrollbar {
@@ -111,16 +111,16 @@ body {
 
 .boardBg2::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: rgba(255, 247, 87, 0.5);
+    background: rgba(185, 176, 0, 0.1);
 }
 
 .boardBg2::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: rgba(255, 243, 80, 0.3);
+    background: rgba(143, 133, 0, 0.2);
 }
 
 .boardBg2::-webkit-scrollbar-thumb:active {
-    background: rgba(177, 165, 0, 0.3);
+    background: rgba(134, 125, 0, 0.2);
 }
 
 .boardBg1::-webkit-scrollbar {
@@ -130,16 +130,16 @@ body {
 
 .boardBg1::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: rgba(255, 109, 109, 0.418);
+    background: rgba(255, 109, 109, 0.1);
 }
 
 .boardBg1::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: rgba(255, 0, 0, 0.3);
+    background: rgba(255, 0, 0, 0.1);
 }
 
 .boardBg1::-webkit-scrollbar-thumb:active {
-    background: rgba(177, 0, 0, 0.3);
+    background: rgba(177, 0, 0, 0.1);
 }
 
 .tododescrip::-webkit-scrollbar {

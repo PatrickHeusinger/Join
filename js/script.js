@@ -65,8 +65,6 @@ function hideDate() {
         month = '0' + month.toString();
     if (day < 10)
         day = '0' + day.toString();
-
     let minDate = year + '-' + month + '-' + day;
-
     document.getElementById('taskDate').setAttribute('min', minDate);
 }

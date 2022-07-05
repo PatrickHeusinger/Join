@@ -61,10 +61,10 @@ function renderBacklogContent() {
             <div id="blTask${i}">
                 <div class="backlogCard">
                     <div class="blCard1">
-                    <div>${task['employerImg']}</div>
+                    <div class="invisible">${task['employerImg']}</div>
                         <div>${task['title']}</div>
                         <div><b>${task['category']}</b></div>
-                        <div>${task['date']}</div>
+                        <div>${task['date']}</div>  
                     </div>
                     <div class="blCard2">
                         <div><button class="deletebtn" onclick="deleteTask(${i})">

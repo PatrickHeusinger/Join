@@ -14,9 +14,8 @@ let today = new Date().toLocaleString('de');
 let all;
 let expanded = false;
 
-// .replace('T', ', ').replace('Z', '').slice(0, -4);
-function showCheckboxes() {
 
+function showCheckboxes() {
     let checkboxes = document.getElementById("checkboxes");
     if (!expanded) {
         checkboxes.style.display = "block";
@@ -30,8 +29,6 @@ function showCheckboxes() {
         document.getElementById('employer').innerHTML = `+`;
     }
 }
-
-
 
 
 async function addTask() {
@@ -103,6 +100,7 @@ function checkbox() {
         img.push(`<img class="empImgBl" src='./img/office1.jpg'>`);
     }
 }
+
 
 function checkUncheck(main) {
     all = document.getElementsByName('uncheck');
