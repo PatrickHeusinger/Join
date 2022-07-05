@@ -16,7 +16,7 @@
     overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(95%);
+    filter: brightness(97%);
 }
 
 .boardBg4 {
@@ -26,7 +26,7 @@
     overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(95%);
+    filter: brightness(97%);
 }
 
 .boardBg2 {
@@ -36,7 +36,7 @@
     overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(95%);
+    filter: brightness(97%);
 }
 
 .boardBg1 {
@@ -46,7 +46,7 @@
     overflow-x: hidden;
     border-radius: 5px;
     box-shadow: 4px 2px 5px 0px rgb(143, 143, 143);
-    filter: brightness(95%);
+    filter: brightness(97%);
 }
 
 .boardBg1:hover {
@@ -91,7 +91,7 @@
     height: 141px;
     display: flex;
     justify-content: space-between;
-    filter: brightness(96%);
+    filter: brightness(97%);
     cursor: pointer;
 }
 
