@@ -66,7 +66,7 @@ function renderBoardContent(element) {
             <div id="toDOTask${element['id']}" draggable="true" ondragstart="startDragging(${element['id']})" class="boardBox"> 
                 <div class="toDoposition">
                     <div>
-                        <div class="blCardtitle">${element['title']}</div>
+                        <div class="blCardtitle"><b>${element['title']}</b></div>
                         <div>${element['category']}</div>
                         <div>${element['created']}</div>
                         <div>Due: ${element['date']}</div>  
