@@ -15,15 +15,22 @@ let expanded = false;
 
 // .replace('T', ', ').replace('Z', '').slice(0, -4);
 function showCheckboxes() {
-    var checkboxes = document.getElementById("checkboxes");
+
+    let checkboxes = document.getElementById("checkboxes");
     if (!expanded) {
         checkboxes.style.display = "block";
         expanded = true;
+        document.getElementById('employer').innerHTML = ``;
+        document.getElementById('employer').innerHTML = `-`;
     } else {
         checkboxes.style.display = "none";
         expanded = false;
+        document.getElementById('employer').innerHTML = ``;
+        document.getElementById('employer').innerHTML = `+`;
     }
 }
+
+
 
 
 async function addTask() {
@@ -74,15 +81,15 @@ function checkbox() {
     let checked = false;
     if (document.querySelector('#one:checked')) {
         checked = true;
-        employer.push('Yener');
+        employer.push('Y.B.');
     }
     if (document.querySelector('#two:checked')) {
         checked = true;
-        employer.push('Jan');
+        employer.push('J.R.');
     }
     if (document.querySelector('#three:checked')) {
         checked = true;
-        employer.push('Patrick');
+        employer.push('P.H.');
     }
     if (document.querySelector('#four:checked')) {
         checked = true;
@@ -172,20 +179,20 @@ function renderTask() {
                             <span class="taskinnerwindowtitle">ASSIGNED TO</span>
                             <div class="multiselect">
                                 <div class="selectBox" onclick="showCheckboxes()">
-                                    <select id="employer" class="left dflexcolumn taskmargin taskinputstyle">
-                                    <option>- select employer -</option>
-                                    </select>
+                                    <div id="employer">
+                                    +
+                                    </div>
                                     <div class="overSelect"></div>
                                     </div>
                                     <div id="checkboxes">
                                     <label for="one">
-                                    <input type="checkbox" id="one" name="uncheck"/>Yener</label>
+                                    <input type="checkbox" id="one" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office4.jpg">Y.B.</label> 
                                     <label for="two">
-                                    <input type="checkbox" id="two" name="uncheck"/>Jan</label>
+                                    <input type="checkbox" id="two" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office2.jpg">J.R.</label>
                                     <label for="three">
-                                    <input type="checkbox" id="three" name="uncheck"/>Patrick</label>
+                                    <input type="checkbox" id="three" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office3.jpg">P.H.</label>
                                     <label for="four">
-                                    <input type="checkbox" id="four" name="uncheck"/>Guest</label>
+                                    <input type="checkbox" id="four" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office1.jpg">Guest</label>
                                 </div>
                             </div>
                             <div class="employers"></div>
