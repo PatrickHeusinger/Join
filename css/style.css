@@ -160,6 +160,7 @@ body {
 .tododescrip::-webkit-scrollbar-thumb:active {
     background: #363636;
 }
+
 /* CHART */
 .d-none {
     display: none;
@@ -298,10 +299,11 @@ body {
     cursor: pointer;
     box-shadow: 3px 3px 5px 0px rgb(63, 63, 63);
     font-family: 'Sora', sans-serif;
+    filter: brightness(80%);
 }
 
 .wbtn:hover {
-    opacity: 0.8;
+    filter: brightness(100%);
 }
 
 .wtextposition {
@@ -408,14 +410,17 @@ body {
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     .blCard1 {
         margin-left: 0px !important;
         margin-right: 0px !important;
         justify-content: space-evenly !important;
     }
+
     .backlogCard {
         font-size: 0.7em !important;
     }
+
     .innerMenu li {
         text-align: center;
         font-size: 1.7em !important;

@@ -105,3 +105,10 @@
     height: 60px;
     width: 105%;
 }
+
+.empImgboard {
+    position: absolute;
+    top: 15px;
+    right: 4px;
+    font-size: 0.8em;
+}

@@ -85,22 +85,22 @@ function checkbox() {
     if (document.querySelector('#one:checked')) {
         checked = true;
         employer.push('<br>Y.B.');
-        img.push('./img/office3.jpg');
+        img.push(`<img class="empImgBl" src='./img/officeyener.jpg'>`);
     }
     if (document.querySelector('#two:checked')) {
         checked = true;
         employer.push('<br>J.R.');
-        img.push('./img/office4.jpg');
+        img.push(`<img class="empImgBl" src='./img/officejan.jpg'>`);
     }
     if (document.querySelector('#three:checked')) {
         checked = true;
         employer.push('<br>P.H.');
-        img.push('./img/office2.jpg');
+        img.push(`<img class="empImgBl" src='./img/officepat.png'>`);
     }
     if (document.querySelector('#four:checked')) {
         checked = true;
         employer.push('<br>Guest');
-        img.push('./img/office1.jpg');
+        img.push(`<img class="empImgBl" src='./img/office1.jpg'>`);
     }
 }
 
@@ -193,13 +193,13 @@ function renderTask() {
                                     </div>
                                     <div id="checkboxes">
                                     <label for="one">
-                                    <input type="checkbox" id="one" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office4.jpg">Y.B.</label> 
+                                    <input type="checkbox" id="one" name="uncheck"/><img class="checkboximg" src="./img/officeyener.jpg">Y.B.</label> 
                                     <label for="two">
-                                    <input type="checkbox" id="two" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office2.jpg">J.R.</label>
+                                    <input type="checkbox" id="two" name="uncheck"/><img class="checkboximg" src="./img/officejan.jpg">J.R.</label>
                                     <label for="three">
-                                    <input type="checkbox" id="three" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office3.jpg">P.H.</label>
+                                    <input type="checkbox" id="three" name="uncheck"/><img class="checkboximg" src="./img/officepat.png">P.H.</label>
                                     <label for="four">
-                                    <input type="checkbox" id="four" name="uncheck"/><img style="width: 20px; border-radius: 40px;" src="./img/office1.jpg">Guest</label>
+                                    <input type="checkbox" id="four" name="uncheck"/><img class="checkboximg" src="./img/office1.jpg">Guest</label>
                                 </div>
                             </div>
                             <div class="employers"></div>

@@ -61,7 +61,7 @@ function renderBacklogContent() {
             <div id="blTask${i}">
                 <div class="backlogCard">
                     <div class="blCard1">
-                    <div><img class="empImgBl" src="${task['employerImg']}"></div>
+                    <div>${task['employerImg']}</div>
                         <div>${task['title']}</div>
                         <div><b>${task['category']}</b></div>
                         <div>${task['date']}</div>

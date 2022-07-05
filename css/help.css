@@ -58,10 +58,12 @@
     margin-bottom: 20px;
     box-shadow: 3px 3px 5px 0px rgb(63, 63, 63);
     font-family: 'Sora', sans-serif;
+    filter: brightness(80%);
 }
 
 .hsubmitbtn:hover {
-    opacity: 0.8;
+    filter: brightness(100%);
+
 }
 
 .successtext {
@@ -88,10 +90,13 @@
     border-radius: 10px;
     box-shadow: 3px 3px 5px 0px rgb(63, 63, 63);
     font-family: 'Sora', sans-serif;
+    filter: brightness(90%);
+
 }
 
 .successbtn:hover {
-    opacity: 0.8;
+    filter: brightness(100%);
+
 }
 
 .tutorialstyle {
@@ -111,8 +116,11 @@
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 3px 3px 5px 0px rgb(63 63 63);
+    filter: brightness(80%);
+
 }
 
 .tutorialstylelink:hover {
-    opacity: 0.8;
+    filter: brightness(100%);
+
 }
